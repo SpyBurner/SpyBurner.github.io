@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checking...</title>
+    <script>
+        function onloadBody(){
+            url = new URL(window.location);
+            username = url.searchParams.get("username");
+            password = url.searchParams.get("password");
+            alert(url.searchParams);
+
+            file = document.getElementById("acc").file[0];
+            var reader = new FileReader();
+                
+            reader.onload = function(e){
+                str = e.target.result.toString();
+                if (str.search(username) == -1) back();
+                if (str.search(password) == -1) back();
+                go(username);
+            };
+            
+            reader.readAsBinaryString(file);
+        }
+
+        function back(){
+            window.location.assign("./index.html");
+        }
+
+        function go(username){
+            if (username == "linhcute"){
+                window.location.assign("./gift1.html");
+            }
+            else{
+                window.location.assign("./gift2.html");
+            }
+        }
+    </script>
+</head>
+<body onload="onloadBody()">
+    <input type="file" id="acc" value="./accounts.txt" hidden>
+</body>
+</html>
