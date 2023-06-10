@@ -12,22 +12,24 @@
 
             if (username.length == 0 || username == null) {back('2'); return;};
             if (password.length == 0 || password == null) {back('3'); return};
-            alert(username + " " + password);
+            // alert(username + " " + password);
 
             if (sessionStorage.getItem(username) != password) back('1');
-            alert(sessionStorage.getItem(username) != password);
+            // alert(sessionStorage.getItem(username) != password);
             
             go(username);
         }
 
         function go(username){
-            sessionStorage.setItem("loggedin", "1");
+
 
             if (username == sessionStorage.getItem("key1")){
+                sessionStorage.setItem("loggedin", "1");
                 window.location.assign("./gift1.html");
                 return;
             }
             if (username == sessionStorage.getItem("key2")){
+                sessionStorage.setItem("loggedin", "2");
                 window.location.assign("./gift2.html");
                 return;
             }
