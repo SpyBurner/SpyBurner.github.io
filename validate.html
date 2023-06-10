@@ -11,6 +11,8 @@
             password = url.searchParams.get("password");
             alert(url.searchParams);
 
+            if (username == null || password == null) back();
+
             file = document.getElementById("acc").file[0];
             var reader = new FileReader();
                 
@@ -25,7 +27,7 @@
         }
 
         function back(){
-            window.location.assign("./index.html");
+            window.location.assign("./index.html?&error=1");
         }
 
         function go(username){
