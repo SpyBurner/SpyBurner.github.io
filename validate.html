@@ -13,7 +13,7 @@
 
             if (username == null || password == null) back();
 
-            file = document.getElementById("acc").file[0];
+            var file = document.getElementById('acc');
             var reader = new FileReader();
                 
             reader.onload = function(e){
@@ -23,7 +23,7 @@
                 go(username);
             };
             
-            reader.readAsBinaryString(file);
+            reader.readAsBinaryString(file.files[0]);
         }
 
         function back(){
