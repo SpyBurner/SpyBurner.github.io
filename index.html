@@ -3,26 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gift</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Loading...</title>
+    <script>
+        function onloadbody(){
+            sessionStorage.setItem("linhcute", "linhclever");
+            sessionStorage.setItem("linhsieucute", "linhsieuclever");
+            sessionStorage.setItem("key1", "linhcute");
+            sessionStorage.setItem("key2", "linhsieucute");
+            window.location.assign("./login.html");
+        }
+    </script>
 </head>
-<body>
-    <form action="validate.html" method="GET">
-        <input type="file" name="accounts" value="./accounts.txt" hidden>
-        <div class="container">
-            <div class="row">
-                <label for="text">Username</label>
-                <input type="text" name="username">
-            </div>
-            <hr>
-            <div class="row">
-                <label for="password">Password</label>
-                <input type="password" name="password">
-            </div>
-            <div class="row">
-                <input type="submit" name="submit" value="Login">
-            </div>
-        </div>
-    </form>
+<body onload="onloadbody()">
+    
 </body>
 </html>

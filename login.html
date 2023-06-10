@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <script>
+        function onloadbody(){
+            
+
+            const url = new URL(window.location);
+            if (url.searchParams.get('error') == null) return;
+            err = url.searchParams.get('error');
+            alert(err);
+            
+            document.getElementById("err" + err).style.display='block';
+        }
+    </script>
+</head>
+<body onload="onloadbody()">
+    <form action="validate.html" method="GET">
+        <div class="container">
+            <div class="row">
+                <label for="text">Username</label>
+                <input type="text" name="username">
+            </div>
+            <hr>
+            <div class="row">
+                <label for="password">Password</label>
+                <input type="password" name="password">
+            </div>
+            <div class="row">
+                <input type="submit" name="submit" value="Login">
+            </div>
+            <div class="row">
+                <p id="err1" style="display: none;">Wrong username or password!</p>
+                <p id="err2" style="display: none;">Username must not be blank!</p>
+                <p id="err3" style="display: none;">Password must not be blank!</p>
+                
+            </div>
+        </div>
+    </form>
+</body>
+</html>

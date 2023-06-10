@@ -9,38 +9,37 @@
             url = new URL(window.location);
             username = url.searchParams.get("username");
             password = url.searchParams.get("password");
-            alert(url.searchParams);
 
-            if (username == null || password == null) back();
+            if (username.length == 0 || username == null) {back('2'); return;};
+            if (password.length == 0 || password == null) {back('3'); return};
+            alert(username + " " + password);
 
-            var file = document.getElementById('acc');
-            var reader = new FileReader();
-                
-            reader.onload = function(e){
-                str = e.target.result.toString();
-                if (str.search(username) == -1) back();
-                if (str.search(password) == -1) back();
-                go(username);
-            };
+            if (sessionStorage.getItem(username) != password) back('1');
+            alert(sessionStorage.getItem(username) != password);
             
-            reader.readAsBinaryString(file.files[0]);
-        }
-
-        function back(){
-            window.location.assign("./index.html?&error=1");
+            go(username);
         }
 
         function go(username){
-            if (username == "linhcute"){
+            sessionStorage.setItem("loggedin", "1");
+
+            if (username == sessionStorage.getItem("key1")){
                 window.location.assign("./gift1.html");
+                return;
             }
-            else{
+            if (username == sessionStorage.getItem("key2")){
                 window.location.assign("./gift2.html");
+                return;
             }
+            window.location.assign("./login.html?error=1");
+        }
+
+        function back(err){
+            window.location.assign("./login.html?&error=" + err);
+            return;
         }
     </script>
 </head>
 <body onload="onloadBody()">
-    <input type="file" id="acc" value="./accounts.txt" hidden>
 </body>
 </html>
