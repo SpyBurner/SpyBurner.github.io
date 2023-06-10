@@ -12,10 +12,8 @@
 
             if (username.length == 0 || username == null) {back('2'); return;};
             if (password.length == 0 || password == null) {back('3'); return};
-            // alert(username + " " + password);
 
             if (sessionStorage.getItem(username) != password) back('1');
-            // alert(sessionStorage.getItem(username) != password);
             
             go(username);
         }
