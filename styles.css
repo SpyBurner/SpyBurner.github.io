@@ -1,14 +1,13 @@
-/* Hide scrollbar for all browsers */
-body {
-    overflow-x: hidden;
-
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+html, body {
+    overflow-x: hidden !important;  /* Hide horizontal scrollbar */
+    overflow-y: scroll !important;  /* Allow scrolling but hide scrollbar */
+    scrollbar-width: none !important;  /* Firefox */
+    -ms-overflow-style: none !important;  /* IE & Edge */
 }
 
-/* Hide scrollbar for Webkit-based browsers (Chrome, Safari, Edge) */
+html::-webkit-scrollbar, 
 body::-webkit-scrollbar {
-    display: none;
+    display: none !important;
 }
 
 /* Fade animations */
@@ -31,3 +30,5 @@ body::-webkit-scrollbar {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
+
+

@@ -73,8 +73,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    document.body.style.overflowY = "scroll"; // Ensures scrolling
-    document.body.style.scrollbarWidth = "none"; // Firefox
-    document.body.style.msOverflowStyle = "none"; // IE & Edge
-});
+// document.addEventListener("DOMContentLoaded", function() {
+//     document.body.style.overflowY = "scroll"; // Ensures scrolling
+//     document.body.style.scrollbarWidth = "none"; // Firefox
+//     document.body.style.msOverflowStyle = "none"; // IE & Edge
+// });
