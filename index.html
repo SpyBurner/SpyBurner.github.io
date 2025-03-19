@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="abyss">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Hiệp Tài Portfolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-neutral text-white">
+
+    <!-- Header -->
+    <header class="p-5 flex justify-between items-center fixed w-full bg-neutral shadow-md z-50">
+        <h1 class="text-2xl font-bold">Nguyễn Hiệp Tài Portfolio</h1>
+        <nav>
+            <a href="#projects" class="btn btn-ghost">Projects</a>
+            <a href="#contact" class="btn btn-primary">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero min-h-screen flex flex-col items-center justify-center text-center">
+        <h1 class="text-5xl font-bold text-white opacity-0 animate-fade">
+            Hello, I'm <span class="text-primary">[Your Name]</span>
+        </h1>
+        <p class="mt-5 text-lg text-white opacity-0 animate-fade-delay">
+            A passionate developer creating amazing experiences.
+        </p>
+        <a href="#projects" class="btn btn-primary mt-6">View Projects</a>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <h2 class="text-4xl font-bold text-center mb-10">My Projects</h2>
+        <div class="container mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-5">
+            
+            <!-- Repeatable Project Card -->
+            <div class="project-card card bg-base-100 shadow-xl">
+                <figure><img src="https://via.placeholder.com/300" alt="Project Image" class="w-full"></figure>
+                <div class="card-body">
+                    <h3 class="card-title">Project Title</h3>
+                    <p>Short description of the project.</p>
+                    <a href="#" class="btn btn-secondary">View Details</a>
+                </div>
+            </div>
+
+            <!-- Duplicate this block for more projects -->
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 text-center">
+        <h2 class="text-4xl font-bold mb-5">Let's Connect</h2>
+        <p class="text-lg mb-6">Feel free to reach out via email or social media.</p>
+        <a href="mailto:your@email.com" class="btn btn-accent">Contact Me</a>
+    </section>
+
+</body>
+</html>
