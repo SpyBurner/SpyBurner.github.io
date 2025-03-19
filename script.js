@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollToPlugin);
 
     // Fade in projects on scroll
     gsap.utils.toArray(".project-card").forEach((card, index) => {
@@ -19,7 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // Sticky header effect
     gsap.to("header", {
         backgroundColor: "rgba(30, 30, 30, 0.9)",
-        duration: 0.3,
+        duration: 0.5,
+        opacity: 1,
         scrollTrigger: {
             start: "top -10px",
             end: "top -20px",
@@ -43,4 +45,36 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    gsap.from(".hero h1", { 
+        opacity: 0, 
+        y: 20, 
+        duration: 1, 
+        ease: "power2.out" 
+    });
+
+    gsap.from(".hero p", { 
+        opacity: 0, 
+        y: 20, 
+        duration: 1, 
+        delay: 0.3, 
+        ease: "power2.out" 
+    });
+
+    gsap.from(".hero a", { 
+        opacity: 0, 
+        scale: 0.8, 
+        duration: 1, 
+        delay: 0.6, 
+        ease: "elastic.out(1, 0.5)" 
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.overflowY = "scroll"; // Ensures scrolling
+    document.body.style.scrollbarWidth = "none"; // Firefox
+    document.body.style.msOverflowStyle = "none"; // IE & Edge
 });

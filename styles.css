@@ -1,11 +1,14 @@
-/* Hide scrollbar but keep scrolling */
+/* Hide scrollbar for all browsers */
 body {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
+    overflow-x: hidden;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
+/* Hide scrollbar for Webkit-based browsers (Chrome, Safari, Edge) */
 body::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+    display: none;
 }
 
 /* Fade animations */

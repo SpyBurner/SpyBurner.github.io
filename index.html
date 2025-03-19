@@ -1,3 +1,4 @@
+<!-- Starting template generated using ChatGPT and Copilot -->
 <!DOCTYPE html>
 <html lang="en" data-theme="abyss">
 <head>
@@ -5,41 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nguyễn Hiệp Tài Portfolio</title>
 
+    <script src="https://kit.fontawesome.com/451a58ae8f.js" crossorigin="anonymous"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js" defer></script>
+
     <script src="script.js" defer></script>
 </head>
 <body class="bg-neutral text-white">
 
     <!-- Header -->
-    <header class="p-5 flex justify-between items-center fixed w-full bg-neutral shadow-md z-50">
+    <header class="p-5 flex justify-between items-center fixed w-full bg-neutral shadow-md z-50 opacity-0">
         <h1 class="text-2xl font-bold">Nguyễn Hiệp Tài Portfolio</h1>
         <nav>
             <a href="#projects" class="btn btn-ghost">Projects</a>
-            <a href="#contact" class="btn btn-primary">Contact</a>
+            <a href="#contact" class="btn btn-primary">Profiles</a>
         </nav>
     </header>
 
+
     <!-- Hero Section -->
     <section class="hero min-h-screen flex flex-col items-center justify-center text-center">
-        <h1 class="text-5xl font-bold text-white opacity-0 animate-fade">
-            Hello, I'm <span class="text-primary">[Your Name]</span>
+        <h1 class="text-5xl font-bold text-white opacity-100 animate-fade">
+            Hello, I'm <span class="text-primary">Nguyễn Hiệp Tài</span>
+            <br>
+            <span class="text-sm">Also known as <span class="text-warning">SpyBurner</span></span>
         </h1>
-        <p class="mt-5 text-lg text-white opacity-0 animate-fade-delay">
-            A passionate developer creating amazing experiences.
+        <p class="mt-5 text-lg text-white opacity-100 animate-fade-delay">
+            I make games.
         </p>
-        <a href="#projects" class="btn btn-primary mt-6">View Projects</a>
+        <div class="container flex-row justify-center mt-10">
+            <a href="#projects" class="btn btn-primary mt-6">Projects</a>
+            <a href="#contact" class="btn btn-primary mt-6">Profiles</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 text-center">
+        <h2 class="text-4xl font-bold mb-5">Profiles</h2>
+        <div class="container mx-auto">
+            <a href="https://www.linkedin.com/in/nguyen-hiep-tai/" class="btn btn-accent text-2xl"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/SpyBurner" class="btn btn-accent text-2xl"><i class="fa-brands fa-github"></i></a>
+            <a href="nguyenhieptai.work@gmail.com" class="btn btn-accent text-2xl"><i class="fa-solid fa-envelope"></i></a>
+        </div>
     </section>
 
 
     <!-- Projects Section -->
     <section id="projects" class="py-20">
         <h2 class="text-4xl font-bold text-center mb-10">My Projects</h2>
-        <div class="container mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-5">
+        <div class="container mx-auto w-full px-5 grid grid-cols-1">
             
             <!-- Repeatable Project Card -->
             <div class="project-card card bg-base-100 shadow-xl">
@@ -54,13 +75,6 @@
             <!-- Duplicate this block for more projects -->
 
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 text-center">
-        <h2 class="text-4xl font-bold mb-5">Let's Connect</h2>
-        <p class="text-lg mb-6">Feel free to reach out via email or social media.</p>
-        <a href="mailto:your@email.com" class="btn btn-accent">Contact Me</a>
     </section>
 
 </body>
